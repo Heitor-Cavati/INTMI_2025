@@ -1,0 +1,807 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Heitor-Cavati/INTMI_2025/blob/main/Lista%20de%2030%20exerc%C3%ADcios\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "xaZwAZL9HFAm"
+      },
+      "outputs": [],
+      "source": [
+        "#1\n",
+        "numero = int(input(\"Digite sua idade \"))\n",
+        "\n",
+        "if numero < 18:\n",
+        "  print(\"Não pode votar\")\n",
+        "else:\n",
+        "  print(\"Pode votar\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2\n",
+        "nota1 = int(input(\"Fale a primeira nota \"))\n",
+        "nota2 = int(input(\"Fale a segunda nota \"))\n",
+        "\n",
+        "media = (nota1 + nota2) / 2\n",
+        "\n",
+        "if media < 7:\n",
+        "  print(\"Reprovado\")\n",
+        "else:\n",
+        "  print(\"Aprovado\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eHkG3LCAIWxc",
+        "outputId": "7bc49241-d70a-40cf-ded9-1d186c74185e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fale a primeira nota 6\n",
+            "Fale a segunda nota 6\n",
+            "Reprovado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3\n",
+        "temp = int(input(\"Fale a temperatura \"))\n",
+        "\n",
+        "if temp > 30:\n",
+        "  print(\"Está muito quente\")\n",
+        "elif temp > 25:\n",
+        "  print(\"Está quente\")\n",
+        "elif temp > 20:\n",
+        "  print(\"Está agradavel\")\n",
+        "else:\n",
+        "  print(\"Está frio\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v4urChJTMcLm",
+        "outputId": "e1608560-4a2a-4c86-cd5f-e7a3f21f8fec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fale a temperatura 10\n",
+            "Está frio\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4\n",
+        "numero = int(input(\"Digite um número \"))\n",
+        "\n",
+        "if numero % 2 == 0:\n",
+        "  print(\"O número é par\")\n",
+        "else:\n",
+        "  print(\"O número é impar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KHWeCk4pWRER",
+        "outputId": "3368ed16-d37f-4298-96c8-4246a9ae37d7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número 68\n",
+            "O número é par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5\n",
+        "salario = float(input(\"Digite o salário \"))\n",
+        "\n",
+        "\n",
+        "if salario <= 1500:\n",
+        "    reajuste = 0.10\n",
+        "elif salario <= 3000:\n",
+        "    reajuste = 0.07\n",
+        "else:\n",
+        "    reajuste = 0.05\n",
+        "\n",
+        "novo_salario = salario * (1 + reajuste)\n",
+        "\n",
+        "print(f\"Novo salário: R$ {novo_salario:.2f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oYis4zpqYYGN",
+        "outputId": "6c78aca2-2bb2-498b-8917-cf5e237bed0f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o salário 67\n",
+            "Novo salário: R$ 73.70\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6\n",
+        "num1 = int(input(\"Digite o primeiro número: \"))\n",
+        "num2 = int(input(\"Digite o segundo número: \"))\n",
+        "num3 = int(input(\"Digite o terceiro número: \"))\n",
+        "\n",
+        "maior = num1\n",
+        "\n",
+        "if num2 > maior:\n",
+        "  maior = num2\n",
+        "\n",
+        "if num3 > maior:\n",
+        "  maior = num3\n",
+        "\n",
+        "print(f\"O maior número é: {maior}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hncx1uXKPrcI",
+        "outputId": "56fafce4-4d9b-48ba-b094-0cec7295ad81"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 1\n",
+            "Digite o segundo número: 2\n",
+            "Digite o terceiro número: 3\n",
+            "O maior número é: 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7\n",
+        "ano = int(input(\"Digite um ano: \"))\n",
+        "\n",
+        "if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):\n",
+        "  print(f\"O ano {ano} é bissexto.\")\n",
+        "else:\n",
+        "  print(f\"O ano {ano} não é bissexto.\")"
+      ],
+      "metadata": {
+        "id": "uUDknrfaUC3c"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8\n",
+        "idade = int(input(\"Digite a idade da pessoa: \"))\n",
+        "\n",
+        "if idade < 12: # Assuming under 12 is a child ticket\n",
+        "  print(\"Vender ingresso infantil\")\n",
+        "else:\n",
+        "  print(\"Vender ingresso adulto\")"
+      ],
+      "metadata": {
+        "id": "md52IQxqXcMx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9\n",
+        "codigo = int(input(\"Digite o código do produto (1, 2 ou 3): \"))\n",
+        "\n",
+        "if codigo == 1:\n",
+        "  print(\"Produto: Arroz\")\n",
+        "elif codigo == 2:\n",
+        "  print(\"Produto: Feijão\")\n",
+        "elif codigo == 3:\n",
+        "  print(\"Produto: Macarrão\")\n",
+        "else:\n",
+        "  print(\"Código inválido. Por favor, digite 1, 2 ou 3.\")"
+      ],
+      "metadata": {
+        "id": "wArlhRycXmEr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10\n",
+        "hora = int(input(\"Digite a hora (0 a 23): \"))\n",
+        "\n",
+        "if 0 <= hora < 12:\n",
+        "  print(\"Bom dia!\")\n",
+        "elif 12 <= hora < 18:\n",
+        "  print(\"Boa tarde!\")\n",
+        "elif 18 <= hora <= 23:\n",
+        "  print(\"Boa noite!\")\n",
+        "else:\n",
+        "  print(\"Horário inválido. Por favor, digite um número entre 0 e 23.\")"
+      ],
+      "metadata": {
+        "id": "G34tZbxGXyN6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#11\n",
+        "soma_total = 0\n",
+        "while True:\n",
+        "  numero = int(input(\"Digite um número para somar (ou 0 para parar): \"))\n",
+        "  if numero == 0:\n",
+        "    break\n",
+        "  soma_total += numero\n",
+        "\n",
+        "print(f\"A soma total dos números é: {soma_total}\")"
+      ],
+      "metadata": {
+        "id": "5FNwDooWX-4E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#12\n",
+        "senha_correta = \"python123\"\n",
+        "senha_digitada = \"\"\n",
+        "\n",
+        "while senha_digitada != senha_correta:\n",
+        "  senha_digitada = input(\"Digite a senha: \")\n",
+        "  if senha_digitada != senha_correta:\n",
+        "    print(\"Senha incorreta. Tente novamente.\")\n",
+        "\n",
+        "print(\"Bem-vindo(a) ao sistema!\")"
+      ],
+      "metadata": {
+        "id": "ofDzh37hYPZO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#13\n",
+        "current_number = 1\n",
+        "total_sum = 0\n",
+        "\n",
+        "print(\"Números utilizados:\")\n",
+        "while total_sum <= 100:\n",
+        "  print(current_number)\n",
+        "  total_sum += current_number\n",
+        "  current_number += 1\n",
+        "\n",
+        "print(f\"A soma total ultrapassou 100 e é: {total_sum}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uOHLIOaEYcld",
+        "outputId": "b3d4686f-8301-4a65-9bb1-6f5fe19f91df"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#14\n",
+        "soma_idades = 0\n",
+        "contador_idades = 0\n",
+        "\n",
+        "while True:\n",
+        "  idade = int(input(\"Digite uma idade (ou um valor negativo para parar): \"))\n",
+        "\n",
+        "  if idade < 0:\n",
+        "    break\n",
+        "  elif idade >= 0:\n",
+        "    soma_idades += idade\n",
+        "    contador_idades += 1\n",
+        "\n",
+        "if contador_idades > 0:\n",
+        "  media_idades = soma_idades / contador_idades\n",
+        "  print(f\"A média das idades digitadas é: {media_idades:.2f}\")\n",
+        "else:\n",
+        "  print(\"Nenhuma idade válida foi digitada.\")"
+      ],
+      "metadata": {
+        "id": "34mtS9bsY6y-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#15\n",
+        "numero_inicial = int(input(\"Digite um número para iniciar a contagem regressiva: \"))\n",
+        "\n",
+        "print(\"Contagem regressiva:\")\n",
+        "while numero_inicial >= 0:\n",
+        "  print(numero_inicial)\n",
+        "  numero_inicial -= 1\n",
+        "\n",
+        "print(\"Contagem finalizada!\")"
+      ],
+      "metadata": {
+        "id": "FfbxIJiOZDZK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#16\n",
+        "for i in range(1, 51):\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5L9RoxW_ZMFq",
+        "outputId": "56b1cef8-adde-41a2-a873-fff7a4def98e"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "16\n",
+            "17\n",
+            "18\n",
+            "19\n",
+            "20\n",
+            "21\n",
+            "22\n",
+            "23\n",
+            "24\n",
+            "25\n",
+            "26\n",
+            "27\n",
+            "28\n",
+            "29\n",
+            "30\n",
+            "31\n",
+            "32\n",
+            "33\n",
+            "34\n",
+            "35\n",
+            "36\n",
+            "37\n",
+            "38\n",
+            "39\n",
+            "40\n",
+            "41\n",
+            "42\n",
+            "43\n",
+            "44\n",
+            "45\n",
+            "46\n",
+            "47\n",
+            "48\n",
+            "49\n",
+            "50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#17\n",
+        "numero = int(input(\"Digite um número para ver a tabuada: \"))\n",
+        "\n",
+        "print(f\"Tabuada de {numero}:\")\n",
+        "for i in range(1, 11):\n",
+        "  resultado = numero * i\n",
+        "  print(f\"{numero} x {i} = {resultado}\")"
+      ],
+      "metadata": {
+        "id": "mZBGjsYnZvUv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#18\n",
+        "palavra = input(\"Digite uma palavra: \")\n",
+        "\n",
+        "print(\"Caracteres da palavra:\")\n",
+        "for caractere in palavra:\n",
+        "  print(caractere)"
+      ],
+      "metadata": {
+        "id": "eDQ7VF4XZ3Vp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#19\n",
+        "maiores_de_18 = 0\n",
+        "\n",
+        "for i in range(5):\n",
+        "  idade = int(input(f\"Digite a idade da pessoa {i+1}: \"))\n",
+        "  if idade > 18:\n",
+        "    maiores_de_18 += 1\n",
+        "\n",
+        "print(f\"Das 5 idades digitadas, {maiores_de_18} são maiores de 18 anos.\")"
+      ],
+      "metadata": {
+        "id": "YnqeO85dZ62I"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#20\n",
+        "numeros = []\n",
+        "for i in range(7):\n",
+        "  num = int(input(f\"Digite o número {i+1}: \"))\n",
+        "  numeros.append(num)\n",
+        "\n",
+        "maior_numero = numeros[0]\n",
+        "for num in numeros:\n",
+        "  if num > maior_numero:\n",
+        "    maior_numero = num\n",
+        "\n",
+        "print(f\"O maior número digitado é: {maior_numero}\")"
+      ],
+      "metadata": {
+        "id": "Gh8y4kOMaKGf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#21\n",
+        "tarefas = []\n",
+        "for i in range(4):\n",
+        "  nome_tarefa = input(f\"Digite o nome da tarefa {i+1}: \")\n",
+        "  tarefas.append(nome_tarefa)\n",
+        "\n",
+        "nome_mais_longo = \"\"\n",
+        "for tarefa in tarefas:\n",
+        "  if len(tarefa) > len(nome_mais_longo):\n",
+        "    nome_mais_longo = tarefa\n",
+        "\n",
+        "print(f\"A tarefa com o nome mais longo é: '{nome_mais_longo}'\")"
+      ],
+      "metadata": {
+        "id": "DGQFXuhQaP9_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#22\n",
+        "soma_pares = 0\n",
+        "\n",
+        "for numero in range(2, 101, 2):\n",
+        "  soma_pares += numero\n",
+        "\n",
+        "print(f\"A soma de todos os números pares entre 2 e 100 é: {soma_pares}\")"
+      ],
+      "metadata": {
+        "id": "8orFBrIYaafQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#23\n",
+        "positivos = 0\n",
+        "negativos = 0\n",
+        "zeros = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "  numero = int(input(f\"Digite o número {i+1}: \"))\n",
+        "  if numero > 0:\n",
+        "    positivos += 1\n",
+        "  elif numero < 0:\n",
+        "    negativos += 1\n",
+        "  else:\n",
+        "    zeros += 1\n",
+        "\n",
+        "print(f\"Quantidade de números positivos: {positivos}\")\n",
+        "print(f\"Quantidade de números negativos: {negativos}\")\n",
+        "print(f\"Quantidade de zeros: {zeros}\")"
+      ],
+      "metadata": {
+        "id": "PkXIPbNLamio"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#24\n",
+        "print(\"Digite 6 nomes:\")\n",
+        "for i in range(6):\n",
+        "  nome = input(f\"Nome {i+1}: \")\n",
+        "  if nome.startswith('A') or nome.startswith('C'):\n",
+        "    print(nome)"
+      ],
+      "metadata": {
+        "id": "DOngNhjYawuY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#25\n",
+        "print(\"Digite números (digite 999 para parar):\")\n",
+        "while True:\n",
+        "  valor = int(input(\"Digite um número: \"))\n",
+        "  if valor == 999:\n",
+        "    break\n",
+        "  print(f\"Você digitou: {valor}\")\n",
+        "\n",
+        "print(\"Programa encerrado.\")"
+      ],
+      "metadata": {
+        "id": "QGausHxja8aJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = []\n",
+        "a.append(\"Yago\")\n",
+        "a.append(\"Gesson\")\n",
+        "a.append(\"Bernardo\")\n",
+        "a.append(\"Carlos Eduardo\")\n",
+        "a.append(\"Pedro Brenzan\")\n",
+        "a.append(\"Pedro Henrrique\")\n",
+        "a.append(\"Santana\")\n",
+        "a.append(\"Benício\")\n",
+        "a.append(\"Ryan\")\n",
+        "a.remove(\"Carlos Eduardo\")\n",
+        "a.insert(0, \"Heitor Cavati Lindo\")\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cC17V2FjbDqc",
+        "outputId": "83424de0-5af0-4519-e5ad-849fbdb86c91"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Heitor Cavati Lindo', 'Yago', 'Gesson', 'Bernardo', 'Pedro Brenzan', 'Pedro Henrrique', 'Santana', 'Benício', 'Ryan']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#26\n",
+        "print(\"Números de 1 a 20 (excluindo múltiplos de 4):\")\n",
+        "for numero in range(1, 21):\n",
+        "  if numero % 4 == 0:\n",
+        "    continue\n",
+        "  print(numero)"
+      ],
+      "metadata": {
+        "id": "9M2UFsb2dB9c"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#27\n",
+        "senha_correta = \"python123\"\n",
+        "max_tentativas = 3\n",
+        "\n",
+        "for tentativa in range(1, max_tentativas + 1):\n",
+        "  senha_digitada = input(f\"Tentativa {tentativa}/{max_tentativas}: Digite a senha: \")\n",
+        "\n",
+        "  if senha_digitada == senha_correta:\n",
+        "    print(\"Bem-vindo(a) ao sistema!\")\n",
+        "    break\n",
+        "  else:\n",
+        "    print(\"Senha incorreta.\")\n",
+        "\n",
+        "  if tentativa == max_tentativas:\n",
+        "    print(\"Número máximo de tentativas excedido. Acesso bloqueado.\")"
+      ],
+      "metadata": {
+        "id": "xnEZDRq5dLed"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#28\n",
+        "soma_positivos = 0\n",
+        "\n",
+        "print(\"Digite 10 números:\")\n",
+        "for i in range(1, 11):\n",
+        "  numero = int(input(f\"Número {i}: \"))\n",
+        "  if numero < 0:\n",
+        "    print(\"Número negativo ignorado.\")\n",
+        "    continue\n",
+        "  soma_positivos += numero\n",
+        "\n",
+        "print(f\"A soma dos números positivos digitados é: {soma_positivos}\")"
+      ],
+      "metadata": {
+        "id": "vsvkLNDjdaQt"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#29\n",
+        "soma_acumulada = 0\n",
+        "numero_atual = 1\n",
+        "\n",
+        "print(\"Acumulando números:\")\n",
+        "while True:\n",
+        "  soma_acumulada += numero_atual\n",
+        "  print(f\"Adicionando {numero_atual}, soma atual: {soma_acumulada}\")\n",
+        "  if soma_acumulada > 200:\n",
+        "    print(\"Soma ultrapassou 200!\")\n",
+        "    break\n",
+        "  numero_atual += 1\n",
+        "\n",
+        "print(f\"Acumulador encerrado. Soma final: {soma_acumulada}\")"
+      ],
+      "metadata": {
+        "id": "lmFLYde5dj6l"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#30\n",
+        "contador_palavras = 0\n",
+        "\n",
+        "print(\"Digite palavras (digite 'fim' para parar):\")\n",
+        "while True:\n",
+        "  palavra = input(\"Digite uma palavra: \")\n",
+        "  if palavra.lower() == 'fim':\n",
+        "    break\n",
+        "  contador_palavras += 1\n",
+        "\n",
+        "print(f\"Foram informadas {contador_palavras} palavras válidas.\")"
+      ],
+      "metadata": {
+        "id": "Q7eAUHFwdu1u"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
