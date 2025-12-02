@@ -1,0 +1,858 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOMjh8TVCujo7hI/ipqMbLZ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Heitor-Cavati/INTMI_2025/blob/main/Lista%203%3A%20Heitor%20e%20Bernardo\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1J9UDo5MEFGc",
+        "outputId": "6a4cc716-d00a-42ec-843d-b12e9186bd7b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "67\n",
+            "67\n",
+            "667\n",
+            "6767\n",
+            "6767676\n",
+            "676767676\n",
+            "6767676\n",
+            "6767\n",
+            "67676767676\n",
+            "676767677667\n",
+            "67676767\n",
+            "676767\n",
+            "6767\n",
+            "67\n",
+            "6\n",
+            "[67, 667, 6767, 6767676, 676767676, 67676767676, 676767677667, 67676767, 676767, 6]\n"
+          ]
+        }
+      ],
+      "source": [
+        "#1\n",
+        "nums = [int(input()) for _ in range(15)]\n",
+        "resultado = []\n",
+        "for n in nums:\n",
+        "    if n not in resultado:\n",
+        "        resultado.append(n)\n",
+        "print(resultado)\n",
+        "7"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2\n",
+        "pessoas = []\n",
+        "\n",
+        "for _ in range(10):\n",
+        "    nome = input(\"Nome: \")\n",
+        "    idade = int(input(\"Idade: \"))\n",
+        "    pessoas.append((nome, idade))\n",
+        "\n",
+        "# Encontra a tupla com maior idade\n",
+        "mais_velho = max(pessoas, key=lambda x: x[1])\n",
+        "\n",
+        "print(\"Pessoa mais velha:\", mais_velho[0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LyidMLSFFyNk",
+        "outputId": "c6c66d9a-aba1-475f-e04b-39fb17d61398"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome: Izidio\n",
+            "Idade: 121\n",
+            "Nome: Heitor\n",
+            "Idade: 89\n",
+            "Nome: Torddelas\n",
+            "Idade: 190\n",
+            "Nome: Benício\n",
+            "Idade: 16\n",
+            "Nome: Inserir Texto\n",
+            "Idade: 99990\n",
+            "Nome: Demiúrgo\n",
+            "Idade: 99999999999999999999999999999999999999999999\n",
+            "Nome: sequiço\n",
+            "Idade: 40000000000000\n",
+            "Nome: cr7\n",
+            "Idade: 100\n",
+            "Nome: prprpr\n",
+            "Idade: 459\n",
+            "Nome: dek\n",
+            "Idade: 654\n",
+            "Pessoa mais velha: Demiúrgo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3\n",
+        "nums = [int(input()) for _ in range(10)]\n",
+        "for i in range(len(nums)):\n",
+        "    nums[i] = nums[i]/3 if nums[i] % 2 else nums[i]/2\n",
+        "print(nums)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HMEhwcxAHP8D",
+        "outputId": "80c6af34-9a7c-4c9c-86e2-429aa188be70"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1223\n",
+            "123\n",
+            "12\n",
+            "1\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "7\n",
+            "67\n",
+            "67\n",
+            "[407.6666666666667, 41.0, 6.0, 0.3333333333333333, 22.333333333333332, 22.333333333333332, 22.333333333333332, 2.3333333333333335, 22.333333333333332, 22.333333333333332]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4\n",
+        "frase = input().split()\n",
+        "vogais = \"aeiouAEIOU\"\n",
+        "resultado = [p for p in frase if p[0] in vogais]\n",
+        "print(resultado)\n"
+      ],
+      "metadata": {
+        "id": "b20udZ8NHb6Z",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ad6b02fa-fb85-4e6b-841e-89e4dbd38062"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "aleluia\n",
+            "['aleluia']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5\n",
+        "nums = [int(input()) for _ in range(10)]\n",
+        "primos = []\n",
+        "for n in nums:\n",
+        "    if n > 1 and all(n % d != 0 for d in range(2, int(n**0.5)+1)):\n",
+        "        primos.append(n)\n",
+        "print(primos)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o2x1LmRCLxmw",
+        "outputId": "9e2b1b33-6609-4f04-e3db-59676e6ccfe6"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "4\n",
+            "3\n",
+            "4\n",
+            "3\n",
+            "4\n",
+            "3\n",
+            "4\n",
+            "3\n",
+            "4\n",
+            "[3, 3, 3, 3, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6\n",
+        "lista = [input(\"Elemento: \") for _ in range(8)]\n",
+        "\n",
+        "if lista == lista[::-1]:\n",
+        "    print(\"É palíndroma!\")\n",
+        "else:\n",
+        "    print(\"Não é.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZFZfISs_MVs3",
+        "outputId": "bb20b55d-ed20-4464-dfca-845855ed9d38"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "Elemento: arara\n",
+            "É palíndroma!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#7\n",
+        "import random\n",
+        "\n",
+        "lista1 = [random.randint(1,100) for _ in range(10)]\n",
+        "lista2 = [random.randint(1,100) for _ in range(10)]\n",
+        "\n",
+        "inter = [x for x in lista1 if x in lista2]\n",
+        "\n",
+        "print(lista1)\n",
+        "print(lista2)\n",
+        "print(\"Interseção:\", inter)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QhXMCGQJND91",
+        "outputId": "89cca363-d827-4f64-a7b7-212854d04f62"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[62, 7, 53, 66, 18, 41, 5, 69, 92, 23]\n",
+            "[72, 44, 62, 76, 42, 32, 74, 56, 5, 42]\n",
+            "Interseção: [62, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8\n",
+        "import random\n",
+        "sorteio = random.sample(range(1,61), 6)\n",
+        "print(sorted(sorteio))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "je49oGVaNOHF",
+        "outputId": "56f38605-fa0c-431d-e814-7dd8b9017997"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[8, 29, 35, 38, 43, 58]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9\n",
+        "nums = [int(input(\"Número: \")) for _ in range(10)]\n",
+        "acumulado = []\n",
+        "\n",
+        "soma = 0\n",
+        "for n in nums:\n",
+        "    soma += n\n",
+        "    acumulado.append(soma)\n",
+        "\n",
+        "print(acumulado)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LtMI9y2GNffU",
+        "outputId": "1443af32-e749-493b-f4a6-fede6e9de6c1"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "Número: 67\n",
+            "[67, 134, 201, 268, 335, 402, 469, 536, 603, 670]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10\n",
+        "nomes = [input(\"Nome: \") for _ in range(10)]\n",
+        "nomes_filtrados = [n for n in nomes if len(n) <= 10]\n",
+        "print(nomes_filtrados)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OxlfaQDYNr3-",
+        "outputId": "82f64f72-7505-4c85-a6ca-d1cf11ffe162"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome: aaaaaaaaaaaaaaaaaaaaaaa\n",
+            "Nome: a\n",
+            "Nome: a\n",
+            "Nome: \n",
+            "Nome: aa\n",
+            "Nome: a\n",
+            "Nome: a\n",
+            "Nome: a\n",
+            "Nome: a\n",
+            "Nome: a\n",
+            "['a', 'a', '', 'aa', 'a', 'a', 'a', 'a', 'a']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#11\n",
+        "mat = [[int(input()) for _ in range(4)] for _ in range(4)]\n",
+        "\n",
+        "soma = 0\n",
+        "for i in range(4):\n",
+        "    soma += mat[i][3-i]\n",
+        "\n",
+        "print(\"Soma:\", soma)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hE2Ex1G5N8VZ",
+        "outputId": "410b5454-c39b-4443-db0d-696376b45b8a"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "4\n",
+            "Soma: 16\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#12\n",
+        "import random\n",
+        "\n",
+        "mat = [[random.randint(1,99) for _ in range(5)] for _ in range(5)]\n",
+        "medias = [sum(linha)/5 for linha in mat]\n",
+        "\n",
+        "print(mat)\n",
+        "print(\"Médias:\", medias)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fgXTh4dRORty",
+        "outputId": "3c97dcea-e76a-4a1f-dbb6-cf900ff7696e"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[27, 50, 19, 86, 82], [93, 13, 12, 89, 58], [96, 62, 47, 73, 79], [88, 76, 29, 73, 59], [61, 28, 76, 29, 27]]\n",
+            "Médias: [52.8, 53.0, 71.4, 65.0, 44.2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#13\n",
+        "mat = [[int(input()) for _ in range(3)] for _ in range(3)]\n",
+        "\n",
+        "identidade = True\n",
+        "for i in range(3):\n",
+        "    for j in range(3):\n",
+        "        if (i == j and mat[i][j] != 1) or (i != j and mat[i][j] != 0):\n",
+        "            identidade = False\n",
+        "\n",
+        "print(\"É identidade?\" , identidade)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CIgnLSzDOY_L",
+        "outputId": "ee1562b3-3a09-4588-b05c-8633e70627f4"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "67\n",
+            "67\n",
+            "134\n",
+            "161\n",
+            "89\n",
+            "67\n",
+            "5555\n",
+            "333\n",
+            "0987654321\n",
+            "É identidade? False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#14\n",
+        "mat = [[int(input()) for _ in range(3)] for _ in range(3)]\n",
+        "\n",
+        "sim = True\n",
+        "for i in range(3):\n",
+        "    for j in range(3):\n",
+        "        if mat[i][j] != mat[j][i]:\n",
+        "            sim = False\n",
+        "\n",
+        "print(\"É simétrica?\", sim)\n"
+      ],
+      "metadata": {
+        "id": "T8ovZfdTOmlF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#15\n",
+        "mat = [[(i+1)*(j+1) for j in range(3)] for i in range(5)]\n",
+        "print(mat)\n"
+      ],
+      "metadata": {
+        "id": "DLjTkunCOqzl"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#16\n",
+        "mat = [[int(input()) for _ in range(4)] for _ in range(4)]\n",
+        "menores = [min(col) for col in zip(*mat)]\n",
+        "print(menores)\n"
+      ],
+      "metadata": {
+        "id": "Ce1lSTo3Ou8p"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#17\n",
+        "m = [[float(input()) for _ in range(3)] for _ in range(3)]\n",
+        "\n",
+        "det = (\n",
+        "    m[0][0]*(m[1][1]*m[2][2] - m[1][2]*m[2][1])\n",
+        "    - m[0][1]*(m[1][0]*m[2][2] - m[1][2]*m[2][0])\n",
+        "    + m[0][2]*(m[1][0]*m[2][1] - m[1][1]*m[2][0])\n",
+        ")\n",
+        "\n",
+        "print(\"Determinante =\", det)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ADfqlRUSOwVV",
+        "outputId": "abba97c0-a84a-4e8e-cb52-5e6203062476"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "67\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "67\n",
+            "7\n",
+            "Determinante = 0.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#18\n",
+        "print(\"Matriz A:\")\n",
+        "A = [[int(input()) for _ in range(3)] for _ in range(3)]\n",
+        "\n",
+        "print(\"Matriz B:\")\n",
+        "B = [[int(input()) for _ in range(3)] for _ in range(3)]\n",
+        "\n",
+        "soma = [[A[i][j] + B[i][j] for j in range(3)] for i in range(3)]\n",
+        "dif  = [[A[i][j] - B[i][j] for j in range(3)] for i in range(3)]\n",
+        "\n",
+        "print(\"Soma:\", soma)\n",
+        "print(\"Diferença:\", dif)\n"
+      ],
+      "metadata": {
+        "id": "-7fSXNA0PmZ-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#19\n",
+        "A = {input() for _ in range(10)}\n",
+        "B = {input() for _ in range(10)}\n",
+        "\n",
+        "print(\"Interseção:\", A & B)\n",
+        "print(\"União:\", A | B)\n",
+        "print(\"A - B:\", A - B)\n",
+        "print(\"B - A:\", B - A)\n"
+      ],
+      "metadata": {
+        "id": "80y4qPprQaaN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#20\n",
+        "frase = input(\"Frase: \").lower()\n",
+        "\n",
+        "import string\n",
+        "for p in string.punctuation:\n",
+        "    frase = frase.replace(p, \"\")\n",
+        "\n",
+        "letras = {c for c in frase if c != \" \"}\n",
+        "print(letras)\n"
+      ],
+      "metadata": {
+        "id": "1QYpgH2kQnXn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#21\n",
+        "conj = {n for n in range(1,101) if n%2!=0 and n%3!=0}\n",
+        "print(conj)\n"
+      ],
+      "metadata": {
+        "id": "FE-ceqeGcRpg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#22\n",
+        "palavras = {input() for _ in range(10)}\n",
+        "resultado = {p for p in palavras if len(p) > 5}\n",
+        "print(resultado)\n"
+      ],
+      "metadata": {
+        "id": "oVH3Cjn7cVCW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#23\n",
+        "A = {int(input()) for _ in range(5)}\n",
+        "B = {int(input()) for _ in range(5)}\n",
+        "\n",
+        "print(\"A ⊂ B?\", A.issubset(B))\n",
+        "print(\"B ⊂ A?\", B.issubset(A))\n"
+      ],
+      "metadata": {
+        "id": "74Ee_BeQcaSX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#24\n",
+        "nums = {int(input()) for _ in range(10)}\n",
+        "\n",
+        "qp = {n for n in nums if int(n**0.5)**2 == n}\n",
+        "print(qp)\n"
+      ],
+      "metadata": {
+        "id": "aRMm6mKNcdao"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#25\n",
+        "func = {}\n",
+        "\n",
+        "for _ in range(5):\n",
+        "    nome = input(\"Nome: \")\n",
+        "    salario = float(input(\"Salário: \"))\n",
+        "    func[nome] = salario\n",
+        "\n",
+        "for n in func:\n",
+        "    if func[n] < 2000:\n",
+        "        func[n] *= 1.10\n",
+        "\n",
+        "print(func)\n"
+      ],
+      "metadata": {
+        "id": "0hhMoRJ9cg0Y"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#26\n",
+        "alunos = {}\n",
+        "\n",
+        "for _ in range(5):\n",
+        "    nome = input(\"Aluno: \")\n",
+        "    notas = [float(input(\"Nota: \")) for _ in range(3)]\n",
+        "    alunos[nome] = notas\n",
+        "\n",
+        "for nome, notas in alunos.items():\n",
+        "    print(nome, \"->\", sum(notas)/3)\n"
+      ],
+      "metadata": {
+        "id": "yQliZpfKcjDn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#27\n",
+        "d = {\n",
+        "    \"feliz\": [\"contente\", \"satisfeito\", \"alegre\"],\n",
+        "    \"triste\": [\"abatido\", \"melancólico\"]\n",
+        "}\n",
+        "\n",
+        "p = input(\"Palavra: \")\n",
+        "print(d.get(p, \"Sem sinônimos.\"))\n"
+      ],
+      "metadata": {
+        "id": "zq0_nXGRcmMY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#28\n",
+        "dic = {}\n",
+        "\n",
+        "for _ in range(10):\n",
+        "    palavra = input(\"Palavra: \")\n",
+        "    letra = palavra[0].lower()\n",
+        "    dic.setdefault(letra, []).append(palavra)\n",
+        "\n",
+        "print(dic)\n"
+      ],
+      "metadata": {
+        "id": "v19OkYLfcqGO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#29\n",
+        "produtos = {}\n",
+        "\n",
+        "for _ in range(3):\n",
+        "    nome = input(\"Produto: \")\n",
+        "    preços = [float(input(\"Preço: \")) for _ in range(3)]\n",
+        "    produtos[nome] = preços\n",
+        "\n",
+        "maior_var = None\n",
+        "produto_var = \"\"\n",
+        "\n",
+        "for nome, preços in produtos.items():\n",
+        "    var = max(preços) - min(preços)\n",
+        "    if maior_var is None or var > maior_var:\n",
+        "        maior_var = var\n",
+        "        produto_var = nome\n",
+        "\n",
+        "print(\"Maior variação:\", produto_var)\n"
+      ],
+      "metadata": {
+        "id": "V14Sa4EccshG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#30\n",
+        "frase = input(\"Frase: \").lower().split()\n",
+        "\n",
+        "contagem = {}\n",
+        "for palavra in frase:\n",
+        "    contagem[palavra] = contagem.get(palavra, 0) + 1\n",
+        "\n",
+        "print(contagem)\n"
+      ],
+      "metadata": {
+        "id": "cxppioyKc5Yw"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
